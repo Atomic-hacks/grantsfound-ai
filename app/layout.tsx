@@ -31,12 +31,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${manrope.variable} font-sans bg-slate text-cloud min-h-screen`}
+        className={`${inter.variable} ${manrope.variable} font-sans 
+        bg-cloud text-slate
+        dark:bg-slate dark:text-cloud 
+        min-h-screen`}
       >
         <a href="#main-content" className="skip-link">
           Skip to content
         </a>
-        <div className="flex min-h-screen bg-midnight">
+        <div className="flex min-h-screen bg-cloud dark:bg-midnight">
           <Sidebar />
           <div className="flex flex-1 flex-col">
             <Navbar />

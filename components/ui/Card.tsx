@@ -14,8 +14,8 @@ export function Card({ children, className, title, ariaLabel }: CardProps) {
     <section
       aria-label={ariaLabel ?? title}
       className={clsx(
-        "rounded-card bg-slate/60 border border-slate/40 shadow-soft backdrop-blur",
-        "p-6 text-cloud space-y-3",
+        "rounded-card bg-cloud/60 dark:bg-slate/60 border border-gray-200  dark:border-slate/40 shadow-soft backdrop-blur",
+        "p-6 text-slate dark:text-cloud space-y-3",
         className
       )}
     >

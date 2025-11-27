@@ -12,12 +12,12 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className="space-y-6 rounded-card border border-slate/60 bg-midnight/60 p-8">
+    <div className="space-y-6 rounded-card border border-cloud/60 dark:border-slate/60 bg-cloud/60 dark:bg-midnight/60 p-8">
       <header>
-        <h1 className="text-3xl font-display font-semibold text-cloud">
+        <h1 className="text-3xl font-display font-semibold text-slate dark:text-cloud">
           Projects
         </h1>
-        <p className="text-cloud/70">
+        <p className="text-slate/70 dark:text-cloud/70">
           Placeholder list. Interns: layer Prisma + API integration.
         </p>
       </header>
@@ -25,13 +25,13 @@ export default function ProjectsPage() {
         {projects.map((project) => (
           <li
             key={project.id}
-            className="flex items-center justify-between rounded-2xl border border-slate/60 bg-slate/60 p-4 text-sm"
+            className="flex items-center justify-between rounded-2xl border border-cloud/60 dark:border-slate/60 bg-gray-100 dark:bg-slate/60 p-4 text-sm"
           >
             <div>
-              <p className="text-lg font-semibold text-cloud">{project.name}</p>
-              <p className="text-cloud/60">Owner: {project.owner}</p>
+              <p className="text-lg font-semibold text-slate dark:text-cloud">{project.name}</p>
+              <p className="text-slate/60 dark:text-cloud/60">Owner: {project.owner}</p>
             </div>
-            <p className="text-cloud/80">{project.stage}</p>
+            <p className="text-slate/80 dark:text-cloud/80">{project.stage}</p>
           </li>
         ))}
       </ul>

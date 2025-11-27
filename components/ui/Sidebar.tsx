@@ -29,15 +29,15 @@ export function Sidebar() {
   return (
     <aside
       aria-label="Workspace navigation"
-      className="hidden lg:flex w-64 flex-col gap-8 border-r border-slate/60 bg-midnight p-6 text-cloud"
+      className="hidden lg:flex w-64 flex-col gap-8 border-r border-cloud/60 dark:border-slate/60 bg-cloud dark:bg-midnight p-6 dark:text-cloud text-slate"
     >
       <div>
-        <p className="text-xs uppercase tracking-widest text-cloud/50">
+        <p className="text-xs uppercase tracking-widest text-slate/50 dark:text-cloud/50">
           Explore
         </p>
         {navGroups.map((group) => (
           <div key={group.label} className="mt-4 space-y-2">
-            <h3 className="text-sm font-semibold text-cloud/70">
+            <h3 className="text-sm font-semibold text-slate/70 dark:text-cloud/70">
               {group.label}
             </h3>
             <ul className="space-y-1">
@@ -64,9 +64,9 @@ export function Sidebar() {
           </div>
         ))}
       </div>
-      <div className="mt-auto rounded-card border border-slate/40 bg-slate/70 p-4 text-sm">
-        <p className="font-semibold text-cloud">Need automation ideas?</p>
-        <p className="text-cloud/70">
+      <div className="mt-auto rounded-card border border-cloud/40 dark:border-slate/40 bg-gray-100 dark:bg-slate/70 p-4 text-sm">
+        <p className="font-semibold text-slate dark:text-cloud">Need automation ideas?</p>
+        <p className="text-slate/70 dark:text-cloud/70">
           Invite partners to GrantsFound Agentic beta.
         </p>
         <button

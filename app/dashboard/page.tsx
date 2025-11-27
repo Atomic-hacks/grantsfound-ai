@@ -55,8 +55,8 @@ export default function DashboardPage() {
 
   return (
     <div className="space-y-6">
-      <header className="rounded-card border border-slate/60 bg-gradient-to-r from-midnight to-slate p-8 text-cloud shadow-soft">
-        <p className="text-sm uppercase tracking-widest text-cloud/60">
+      <header className="rounded-card border border-gray-200 dark:border-slate/60 bg-gradient-to-r from-gray-100 to-gray-50 dark:from-midnight dark:to-slate p-8 text-slate dark:text-cloud shadow-soft">
+        <p className="text-sm uppercase tracking-widest text-slate/60 dark:text-cloud/60">
           Mission readiness
         </p>
         <div className="mt-4 flex flex-wrap items-center gap-10">
@@ -64,7 +64,7 @@ export default function DashboardPage() {
             <p className="text-3xl font-display font-semibold">
               {heroMetrics.agentsOnline} Agents Online
             </p>
-            <p className="text-sm text-cloud/70">
+            <p className="text-sm text-slate/70 dark:text-cloud/70">
               Operating across workstreams
             </p>
           </div>
@@ -72,7 +72,7 @@ export default function DashboardPage() {
             <p className="text-3xl font-display font-semibold">
               {heroMetrics.activeSessions} Active Sessions
             </p>
-            <p className="text-sm text-cloud/70">
+            <p className="text-sm text-slate/70 dark:text-cloud/70">
               Live orchestrations in the last hour
             </p>
           </div>
@@ -93,9 +93,9 @@ export default function DashboardPage() {
           <Card key={project.name} title={project.name}>
             <div className="flex items-center justify-between">
               <Dial label="Health" value={project.progress} />
-              <p className="text-sm text-cloud/70">{project.trend}</p>
+              <p className="text-sm text-slate/70 dark:text-cloud/70">{project.trend}</p>
             </div>
-            <p className="text-xs text-cloud/60">
+            <p className="text-xs text-slate/60 dark:text-cloud/60">
               Interns: replace with live KPI feed + sparkline.
             </p>
           </Card>
@@ -108,13 +108,13 @@ export default function DashboardPage() {
             {deadlines.map((deadline) => (
               <li
                 key={deadline.title}
-                className="flex items-center justify-between rounded-2xl border border-slate/60 bg-midnight/60 px-4 py-3"
+                className="flex items-center justify-between rounded-2xl border border-gray-200 dark:border-slate/60 bg-gray-50 dark:bg-midnight/60 px-4 py-3"
               >
                 <div>
-                  <p className="text-sm font-semibold text-cloud">
+                  <p className="text-sm font-semibold text-slate dark:text-cloud">
                     {deadline.title}
                   </p>
-                  <p className="text-xs text-cloud/60">
+                  <p className="text-xs text-slate/60 dark:text-cloud/60">
                     Auto reminders pending
                   </p>
                 </div>
@@ -130,10 +130,10 @@ export default function DashboardPage() {
             {activityFeed.map((item) => (
               <li
                 key={item.message}
-                className="rounded-2xl border border-slate/50 bg-slate/60 p-3"
+                className="rounded-2xl border border-cloud/50 dark:border-slate/50 bg-cloud/60 dark:bg-slate/60 p-3"
               >
-                <p className="text-sm text-cloud">{item.message}</p>
-                <p className="text-xs text-cloud/60">{item.time}</p>
+                <p className="text-sm text-slate dark:text-cloud">{item.message}</p>
+                <p className="text-xs text-slate/60 dark:text-cloud/60">{item.time}</p>
               </li>
             ))}
           </ul>
