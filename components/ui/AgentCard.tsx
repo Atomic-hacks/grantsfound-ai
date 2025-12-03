@@ -18,19 +18,19 @@ const statusStyles: Record<AgentCardProps["status"], string> = {
 export function AgentCard(props: AgentCardProps) {
   const { name, status, sessions, specialty } = props;
   return (
-    <Card ariaLabel={`${name} agent card`} className="space-y-2 bg-midnight/60">
+    <Card ariaLabel={`${name} agent card`} className="space-y-2 bg-cloud dark:bg-midnight/60">
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-sm uppercase tracking-widest text-cloud/60">
+          <p className="text-sm uppercase tracking-widest text-slate/60 dark:text-cloud/60">
             {specialty}
           </p>
-          <p className="text-lg font-semibold text-cloud">{name}</p>
+          <p className="text-lg font-semibold text-slate dark:text-cloud">{name}</p>
         </div>
         <span className={`text-sm font-semibold ${statusStyles[status]}`}>
           {status}
         </span>
       </div>
-      <p className="text-xs text-cloud/70">
+      <p className="text-xs text-slate/70 dark:text-cloud/70">
         Active sessions: <span className="font-semibold">{sessions}</span>
       </p>
     </Card>

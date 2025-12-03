@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { clsx } from "clsx";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "/dashboard", label: "Dashboard" },
@@ -17,15 +18,15 @@ export function Navbar() {
   return (
     <nav
       aria-label="Primary"
-      className="flex items-center justify-between border-b border-slate/50 bg-slate/80 px-6 py-4 backdrop-blur"
+      className="flex items-center justify-between border-b  border-slate/50 bg-cloud/80 dark:bg-slate/80 px-6 py-4 backdrop-blur"
     >
-      <div className="flex items-center gap-2 font-display text-xl text-cloud">
+      <div className="flex items-center gap-2 font-display text-xl dark:text-cloud text-slate">
         <span className="h-10 w-10 rounded-full bg-gold/90 text-slate flex items-center justify-center font-bold">
           GF
         </span>
         GrantsFound Agentic Platform
       </div>
-      <ul className="flex items-center gap-4 text-sm font-medium text-cloud/80">
+      <ul className="flex items-center gap-4 text-sm font-medium dark:text-cloud/80 text-slate/80">
         {links.map((link) => (
           <li key={link.href}>
             <Link
@@ -45,6 +46,7 @@ export function Navbar() {
           </li>
         ))}
       </ul>
+      <ThemeToggle />
     </nav>
   );
 }

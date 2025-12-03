@@ -32,7 +32,7 @@ export function AgentModal({ open, onClose }: AgentModalProps) {
       aria-label="Launch agent wizard"
       className={clsx(
         "backdrop:bg-slate/90 backdrop:backdrop-blur",
-        "rounded-card border border-slate/30 bg-slate p-0 text-cloud"
+        "rounded-card border  border-cloud/30 dark:border-slate/30 bg-cloud dark:bg-slate p-0 dark:text-cloud text-slate" 
       )}
       onClose={onClose}
     >
@@ -42,14 +42,14 @@ export function AgentModal({ open, onClose }: AgentModalProps) {
           <h2 className="text-2xl font-display font-semibold">
             Agent launch assistant
           </h2>
-          <p className="text-sm text-cloud/70">
+          <p className="text-sm text-slate/70 dark:text-cloud/70">
             Interns: wire in orchestrator steps for grant intel, compliance, and
             reporting tasks. Capture agent goals and custom data connections.
           </p>
         </header>
-        <div className="rounded-2xl border border-slate/50 p-4 text-sm text-cloud/80">
-          <p className="font-semibold text-cloud">Mock configuration summary</p>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-cloud/70">
+        <div className="rounded-2xl border border-cloud/50 dark:border-slate/50 p-4 text-sm dark:text-cloud/80 text-slate/80">
+          <p className="font-semibold text-slate dark:text-cloud">Mock configuration summary</p>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-slate/70 dark:text-cloud/70">
             <li>Primary workflow: KPI health check</li>
             <li>Data taps: CRM sandbox, budget sheet upload</li>
             <li>Escalations route to: compliance@grantsfound.ai</li>
@@ -59,7 +59,7 @@ export function AgentModal({ open, onClose }: AgentModalProps) {
           <button
             type="button"
             onClick={onClose}
-            className="rounded-full px-4 py-2 text-sm font-semibold text-cloud/70 hover:text-cloud focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+            className="rounded-full px-4 py-2 text-sm font-semibold dark:text-cloud/70 text-slate/70 hover:text-slate dark:hover:text-cloud focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
           >
             Cancel
           </button>
